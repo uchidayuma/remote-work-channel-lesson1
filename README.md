@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 第5回でやること
+
+- APIアクセス用のコンポーネントを作成
+- App.jsからnewsAPIを叩いて情報を確認
+
 ## Available Scripts
 
 In the project directory, you can run:
