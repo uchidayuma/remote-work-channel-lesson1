@@ -4,6 +4,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Tabs, Tab } from 'react-bootstrap';
 
+import { fetch } from './Api';
+
 class App extends Component {
   constructor() {
     super();
@@ -11,6 +13,12 @@ class App extends Component {
       news: []
     };
   }
+  
+  componentDidMount(){
+    const news = fetch()
+    console.log(news)
+  }
+  
   render(){
     return (
       <div className="App">
@@ -34,10 +42,10 @@ class App extends Component {
             </Tab>
           </Tabs>
         </main>
-        <fotter className="footer">
+        <footer className="footer">
           <img src={logo} className="footer-logo" alt="logo" />
           <p className="footer-description">React News by RemoteWorkChannel</p>
-        </fotter>
+        </footer>
       </div>
     );
   }

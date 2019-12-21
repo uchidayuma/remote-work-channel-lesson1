@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 第5回でやること
 
+- 設計の考え方・ロジック部分は分ける
 - APIアクセス用のコンポーネントを作成
 - App.jsからnewsAPIを叩いて情報を確認
 
