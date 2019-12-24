@@ -2,8 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 第6回でやること
 
-- setState()
-- ニュース表示用のパネルを作ろう
+- グリッドレイアウト
+- ニュース表示用のカードを作ろう
 
 ## Available Scripts
 
