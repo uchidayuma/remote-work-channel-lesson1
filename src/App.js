@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Row, Col, Card, Button, Tabs, Tab } from 'react-bootstrap';
 
 import { fetch } from './Api';
 
@@ -32,7 +32,60 @@ class App extends Component {
         <main className="main">
           <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
             <Tab eventKey="home" title="Home">
-              HOME
+              <Row>
+                <Col md={3}>
+                  <Card>
+                    <Card.Img variant="top" src="/logo512.png" />
+                    <Card.Body>
+                      <Card.Title>Card Title</Card.Title>
+                      <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={3}>
+                  <Card>
+                    <Card.Img variant="top" src="/logo512.png" />
+                    <Card.Body>
+                      <Card.Title>Card Title</Card.Title>
+                      <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={3}>
+                  <Card>
+                    <Card.Img variant="top" src="/logo512.png" />
+                    <Card.Body>
+                      <Card.Title>Card Title</Card.Title>
+                      <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={3}>
+                  <Card>
+                    <Card.Img variant="top" src="/logo512.png" />
+                    <Card.Body>
+                      <Card.Title>Card Title</Card.Title>
+                      <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
             </Tab>
             <Tab eventKey="profile" title="Profile">
               Profile
