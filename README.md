@@ -1,10 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 第5回でやること
+## 第6回でやること
 
-- 設計の考え方・ロジック部分は分ける
-- APIアクセス用のコンポーネントを作成
-- App.jsからnewsAPIを叩いて情報を確認
+- setState()
+- ニュース表示用のパネルを作ろう
 
 ## Available Scripts
 
