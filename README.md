@@ -1,9 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 第6回でやること
+## 第7回でやること
 
-- グリッドレイアウト
-- ニュース表示用のカードを作ろう
+- setState()
+- ループ関数でニュースカードを作ろう！
 
 ## Available Scripts
 
