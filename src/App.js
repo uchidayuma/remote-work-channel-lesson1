@@ -14,12 +14,25 @@ class App extends Component {
     };
   }
   
-  componentDidMount(){
-    const news = fetch()
-    console.log(news)
+  async componentDidMount(){
+    const news = await fetch()
+    this.setState({'news': news})
   }
   
   render(){
+    const newsCards = this.state.news.map((val, index) =>
+      <Col xs="12" sm="6" md="4" lg="3" key={index} >
+        <a href={val.url} target='blank'>
+          <Card className=''>
+            <Card.Img className='card-image' variant="top" src={val.urlToImage} />
+            <Card.Body>
+              <Card.Title className='card-title'>{val.title}</Card.Title>
+              <Card.Text className='card-text'>{val.description}</Card.Text>
+            </Card.Body>
+          </Card>
+        </a>
+      </Col>
+    )
     return (
       <div className="App">
         <header className="App-header">
@@ -33,58 +46,7 @@ class App extends Component {
           <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
             <Tab eventKey="home" title="Home">
               <Row>
-                <Col md={3}>
-                  <Card>
-                    <Card.Img variant="top" src="/logo512.png" />
-                    <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={3}>
-                  <Card>
-                    <Card.Img variant="top" src="/logo512.png" />
-                    <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={3}>
-                  <Card>
-                    <Card.Img variant="top" src="/logo512.png" />
-                    <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={3}>
-                  <Card>
-                    <Card.Img variant="top" src="/logo512.png" />
-                    <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
+                {newsCards}
               </Row>
             </Tab>
             <Tab eventKey="profile" title="Profile">
