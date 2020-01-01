@@ -1,9 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 第7回でやること
+## 第8回でやること
 
-- setState()
-- ループ関数でニュースカードを作ろう！
+- カテゴリー別のニュースを取得しよう！
 
 ## Available Scripts
 

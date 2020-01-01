@@ -19,6 +19,11 @@ class App extends Component {
     this.setState({'news': news})
   }
   
+  tabClick = async (eventKey) =>{
+    const news = await fetch(eventKey)
+    this.setState({'news': news})
+  }
+  
   render(){
     const newsCards = this.state.news.map((val, index) =>
       <Col xs="12" sm="6" md="4" lg="3" key={index} >
@@ -43,17 +48,21 @@ class App extends Component {
           </div>
         </header>
         <main className="main">
-          <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+          <Tabs defaultActiveKey="home" onSelect={this.tabClick} id="uncontrolled-tab-example">
             <Tab eventKey="home" title="Home">
               <Row>
                 {newsCards}
               </Row>
             </Tab>
-            <Tab eventKey="profile" title="Profile">
-              Profile
+            <Tab eventKey="business" title="ビジネス">
+              <Row>
+                {newsCards}
+              </Row>
             </Tab>
-            <Tab eventKey="contact" title="Contact" disabled>
-              Cotact
+            <Tab eventKey="entertainment" title="エンタメ">
+              <Row>
+                {newsCards}
+              </Row>
             </Tab>
           </Tabs>
         </main>
