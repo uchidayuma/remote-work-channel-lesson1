@@ -1,4 +1,7 @@
 import React,{Component} from 'react';
+
+import Header from './Header';
+
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,13 +43,7 @@ class App extends Component {
     )
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <div>
-            <h1 className="header-title">React News</h1>
-            <p className="header-description">Powered by NewsApi</p>
-          </div>
-        </header>
+        <Header />
         <main className="main">
           <Tabs defaultActiveKey="home" onSelect={this.tabClick} id="uncontrolled-tab-example">
             <Tab eventKey="home" title="Home">
@@ -60,6 +57,21 @@ class App extends Component {
               </Row>
             </Tab>
             <Tab eventKey="entertainment" title="エンタメ">
+              <Row>
+                {newsCards}
+              </Row>
+            </Tab>
+            <Tab eventKey="health" title="健康">
+              <Row>
+                {newsCards}
+              </Row>
+            </Tab>
+            <Tab eventKey="science" title="科学">
+              <Row>
+                {newsCards}
+              </Row>
+            </Tab>
+            <Tab eventKey="technology" title="テクノロジー">
               <Row>
                 {newsCards}
               </Row>
