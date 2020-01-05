@@ -1,9 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 第9回でやること
+## 第10回でやること
 
-- カテゴリーを取得しよう！
-- CardのCSSを整えよう！
+- 残りのタブを完成させよう！
+- リファクタリングをしよう！
 
 ## Available Scripts
 

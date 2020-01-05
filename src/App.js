@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 
 import Header from './Header';
+import Footer from './Footer';
+import TabComponent from './TabComponent';
 
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Card, Button, Tabs, Tab } from 'react-bootstrap';
@@ -45,43 +46,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <main className="main">
-          <Tabs defaultActiveKey="home" onSelect={this.tabClick} id="uncontrolled-tab-example">
-            <Tab eventKey="home" title="Home">
-              <Row>
-                {newsCards}
-              </Row>
-            </Tab>
-            <Tab eventKey="business" title="ビジネス">
-              <Row>
-                {newsCards}
-              </Row>
-            </Tab>
-            <Tab eventKey="entertainment" title="エンタメ">
-              <Row>
-                {newsCards}
-              </Row>
-            </Tab>
-            <Tab eventKey="health" title="健康">
-              <Row>
-                {newsCards}
-              </Row>
-            </Tab>
-            <Tab eventKey="science" title="科学">
-              <Row>
-                {newsCards}
-              </Row>
-            </Tab>
-            <Tab eventKey="technology" title="テクノロジー">
-              <Row>
-                {newsCards}
-              </Row>
-            </Tab>
-          </Tabs>
+          <TabComponent newsCards={newsCards} tabClick={this.tabClick}/>
         </main>
-        <footer className="footer">
-          <img src={logo} className="footer-logo" alt="logo" />
-          <p className="footer-description">React News by RemoteWorkChannel</p>
-        </footer>
+        <Footer />
       </div>
     );
   }
